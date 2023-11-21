@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Message</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            color: red;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="hearts"></div>
+    <p id="message"></p>
+
+    <script>
+        function createHearts() {
+            var heartsContainer = document.getElementById('hearts');
+            for (var i = 0; i < 100; i++) {
+                var heart = document.createElement('span');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        function showMessage() {
+            var messageContainer = document.getElementById('message');
+            messageContainer.innerHTML = '<b>潘烨我爱你</b>';
+        }
+
+        // Initialize
+        createHearts();
+        showMessage();
+    </script>
+</body>
+</html>
